@@ -1,10 +1,31 @@
 [
   {
-    "name": "main",
-    "path": "/main",
-    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/main.vue",
-    "chunkName": "pages/main",
-    "_name": "_72742efb"
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_6766034e"
+  },
+  {
+    "name": "directory",
+    "path": "/directory",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/directory.vue",
+    "chunkName": "pages/directory",
+    "_name": "_63a2419b"
+  },
+  {
+    "name": "works-work1",
+    "path": "/works/work1",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/works/work1.vue",
+    "chunkName": "pages/works/work1",
+    "_name": "_08c5d5be"
+  },
+  {
+    "name": "works-work2",
+    "path": "/works/work2",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/works/work2.vue",
+    "chunkName": "pages/works/work2",
+    "_name": "_08a9a6bc"
   },
   {
     "name": "index",

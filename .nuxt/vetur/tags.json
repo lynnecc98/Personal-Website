@@ -1,4 +1,7 @@
 {
+  "Navigation": {
+    "description": "Auto imported from components/Navigation.vue"
+  },
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },

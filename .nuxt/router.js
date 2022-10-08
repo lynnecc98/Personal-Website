@@ -4,7 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _72742efb = () => interopDefault(import('../pages/main.vue' /* webpackChunkName: "pages/main" */))
+const _6766034e = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
+const _63a2419b = () => interopDefault(import('../pages/directory.vue' /* webpackChunkName: "pages/directory" */))
+const _08c5d5be = () => interopDefault(import('../pages/works/work1.vue' /* webpackChunkName: "pages/works/work1" */))
+const _08a9a6bc = () => interopDefault(import('../pages/works/work2.vue' /* webpackChunkName: "pages/works/work2" */))
 const _84f2e700 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -19,9 +22,21 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/main",
-    component: _72742efb,
-    name: "main"
+    path: "/contact",
+    component: _6766034e,
+    name: "contact"
+  }, {
+    path: "/directory",
+    component: _63a2419b,
+    name: "directory"
+  }, {
+    path: "/works/work1",
+    component: _08c5d5be,
+    name: "works-work1"
+  }, {
+    path: "/works/work2",
+    component: _08a9a6bc,
+    name: "works-work2"
   }, {
     path: "/",
     component: _84f2e700,
