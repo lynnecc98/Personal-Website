@@ -1,0 +1,16 @@
+[
+  {
+    "name": "main",
+    "path": "/main",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/main.vue",
+    "chunkName": "pages/main",
+    "_name": "_72742efb"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/chloechoi/Documents/GitHub/Personal-Website/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_84f2e700"
+  }
+]
