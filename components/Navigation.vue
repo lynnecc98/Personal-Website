@@ -18,6 +18,7 @@
   nav {
     padding: 24px 0;
     color: black;
+    text-align: center;
   }
   a{
     color:inherit;

@@ -1,79 +1,107 @@
 <template>
   <div class="homepage">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-        </div>
+    <div class="filterWrapper">
+      <div class ="filter" v-for="(button,i) of buttons" :key="i">
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="button">{{button.title}}</button>
       </div>
-
-      <div class="row">
-        <div class="work col-6 col-md-4 col-xxl-4" v-for="(work, i) of works" :key="i">
+    </div>
+    <div class="galleryWrapper">
+      <Stack :column-min-width="320" :gutter-width="8" :gutter-height="8">
+        <StackItem class="work" v-for="(work, i) of works" :key="i" >
           <NuxtLink to="/">
             <img :src="require(`../assets/${work.src}`)" :alt="work.title" />
             <h3>{{ work.title }}</h3>
           </NuxtLink>
-        </div>
-      </div>
+        </StackItem>
+      </Stack>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       works: [
-        { title: "Title 1", src: "img/img-1.jpg" },
-        { title: "Title 2", src: "img/img-2.jpg" },
-        { title: "Title 3", src: "img/img-3.jpg" },
-        { title: "Title 4", src: "img/img-4.jpg" },
-        { title: "Title 5", src: "img/img-5.jpg" },
-        { title: "Title 6", src: "img/img-6.jpg" },
-        { title: "Title 7", src: "img/img-7.jpg" },
-        { title: "Title 8", src: "img/img-8.jpg" },
-        { title: "Title 9", src: "img/img-9.jpg" },
+        { title: "Title 1", src: "img/AbstractGoldfish_Pencil.jpeg" },
+        { title: "Title 2", src: "img/ColorFish_Marker.jpg" },
+        { title: "Title 3", src: "img/Dragonfly_Etching.jpg" },
+        { title: "Title 4", src: "img/Snickers_MixedMedia.jpeg" },
+        { title: "Title 5", src: "img/StillLife_Pen.jpg" },
+        { title: "Title 6", src: "img/RabbitCage_Pen.jpeg" },
+        { title: "Title 7", src: "img/Goldfish_Oil.jpg" },
+        { title: "Title 8", src: "img/NudeCroquet_Charcoal.jpg" },
+        { title: "Title 9", src: "img/Girl_Pencil.jpg" },
       ],
+      buttons: [
+        { title: "Physical"},
+        { title: "Digital"},
+        { title: "Art"},
+        { title: "Fabrication"},
+        { title: "Sculpture"},
+        { title: "Exhibition"},
+        { title: "Studies"}
+      ]
     };
   },
 };
+
 </script>
 
 <style scoped lang="scss">
-.grid-system-page {
+.homepage {
   h2 {
     text-align: center;
   }
+}
+.work {
+  cursor: pointer;
+  margin: 20px 0;
+  
+  img {
+    width: 100%;
+    transition: filter 0.2s linear;
+  }
 
-  .work {
-    position: relative;
-    cursor: pointer;
-    margin: 20px 0;
-    
+  h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  &:hover {
     img {
-      width: 100%;
-      transition: filter 0.2s linear;
+      filter: brightness(0.2);
     }
 
     h3 {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      color: white;
-      opacity: 0;
-      transition: opacity 0.2s linear;
-    }
-
-    &:hover {
-      img {
-        filter: brightness(0.2);
-      }
-
-      h3 {
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
+}
+.filter{
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+}
+.filterWrapper{
+  text-align: center;
+}
+
+@import "bootstrap";
+$mynewcolor:pink;
+
+.btn-primary {
+    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+}
+
+.btn-outline-primary {
+    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor) ;
 }
 </style>
